@@ -1,5 +1,5 @@
 name: web
-command: ["bash"]
+command: ["/root/serverajedrez.jar"]
 forward:
   - 80:7777
 sync:
