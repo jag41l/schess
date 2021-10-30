@@ -3,6 +3,6 @@ command: ["bash"]
 forward:
   - 80:7777
 sync:
-  - html:/var/www/html
+  - www:/root/www
 persistentVolume:
   enabled: false
