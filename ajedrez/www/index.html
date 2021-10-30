@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no">
+    <script src="js/jquerymin.js"></script>
+    <script src="js/b4j_ws.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <link href="css/materialize.min.css" rel="stylesheet">
+
+<style>
+    footer.page-footer {
+        background-color: #00bcd4;
+    }
+</style>
+    <title></title>
+</head>
+<body>
+
+
+<div class="slider" style="height: 30%">
+    <ul class="slides">
+        <li>
+            <img src="t1.jpg">
+            <div class="caption left-align ">
+                <h1 class="blue-text darken-3">El Ajedrez </h1>
+                <h5 class=" blue-text lighten-2">Una forma de vida</h5>
+            </div>
+        </li>
+        <li>
+            <img src="t2.jpg">
+            <div class="caption right-align">
+                <h1 class="white-text">
+                    Juega con nosotros.....
+                </h1>
+                <h5 class="white-text lighten-3 accent-4"> Server I.E.S. Tháder v1.0Beta</h5>
+
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+<div class="row">
+ <div class="input-field col s12 m4">
+   <i class="mdi-social-person prefix"></i>
+     <label for="usuario">Introduce el jugador</label>
+     <input id="usuario" type="text" required class="validate">
+ </div>
+
+ <div class="input-field col s12 m4">
+   <i class="mdi-communication-vpn-key prefix"></i>
+   <label for="clave">Introduce la contraseña</label>
+   <input id="clave" type="password" required class="validate">
+</div>
+<div class="input-field col s12 m3">
+<button class="btn  waves-effect teal white-text accent-4" id="b">Entrar</button><br>
+<br>
+</div>
+
+</div>
+<div class="row" id="r"></div>
+</div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">Modo de registrarse</h5>
+                <p class="grey-text text-lighten-4"> Para registrarse simplemente introduce el nombre
+                de usuario y contraseña. Si sale un mensaje de error, es debido a que ya existe un jugador con ese
+                 nombre, o que te has equivocado al meter la contraseña.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © <span id="aa"></span>
+        </div>
+    </div>
+</footer>
+<script>
+    $(document).ready(function(){
+       var fecha = new Date();
+       var anyo= fecha.getFullYear();
+        $("#aa").html(anyo+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+"I.E.S. Tháder, Orihuela - Alicante");
+       b4j_connect("/logear");
+        $(".slider").slider({interval:4000, height:400, indicators: false});
+    });
+</script>
+</body>
+</html>
