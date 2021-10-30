@@ -1,0 +1,5 @@
+icon: https://icons.iconarchive.com/icons/wikipedia/flags/72/AC-Saint-Helena-Flag-icon.png
+deploy:
+  - okteto build -t okteto.dev/web:${OKTETO_GIT_COMMIT} web
+devs:
+  - web/okteto.yml
