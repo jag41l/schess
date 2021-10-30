@@ -1,8 +1,9 @@
 name: web
-command: ["/root/serverajedrez.jar"]
+command: ["bash"]
 forward:
-  - 7777:80
+  - 7777:7777
 sync:
   - www:/root/www
+
 persistentVolume:
   enabled: false
