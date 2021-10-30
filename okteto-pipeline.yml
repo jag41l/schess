@@ -1,4 +1,4 @@
-icon: https://icons.iconarchive.com/icons/wikipedia/flags/72/AC-Saint-Helena-Flag-icon.png
+icon: https://icons.iconarchive.com/icons/hopstarter/soft-scraps/96/Games-icon.png
 deploy:
   - okteto build -t okteto.dev/ajedrez:${OKTETO_GIT_COMMIT} ajedrez
 devs:
