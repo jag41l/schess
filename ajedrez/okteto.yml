@@ -1,7 +1,7 @@
 name: web
 command: ["/root/serverajedrez.jar"]
 forward:
-  - 80:7777
+  - 80:80
 sync:
   - www:/root/www
 persistentVolume:
