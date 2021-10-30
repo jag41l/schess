@@ -1,0 +1,8 @@
+name: web
+command: ["bash"]
+forward:
+  - 80:80
+sync:
+  - html:/var/www/html
+persistentVolume:
+  enabled: false
