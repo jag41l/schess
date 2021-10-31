@@ -1,0 +1,8 @@
+services:
+  ajedrez:
+    build: ajedrez
+    scale: 1
+    ports:
+      - 7777:7777
+
+  
