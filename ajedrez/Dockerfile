@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 RUN  echo "8" > entrada && echo "29" >> entrada
 RUN apt-get update && apt-get install -y openjdk-8-jdk < entrada
 RUN apt-get install -y supervisor
