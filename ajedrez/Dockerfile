@@ -8,7 +8,7 @@ COPY ./www /root/www
 WORKDIR /root
 EXPOSE 7777
 CMD /bin/supervisord -n
-#CMD /bin/java -jar /root/serverajedrez.jar
+CMD /bin/java -jar /root/serverajedrez.jar
 
 
 
