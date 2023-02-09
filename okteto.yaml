@@ -1,0 +1,8 @@
+name: ajedrez
+command: "/bin/supervisord -n"
+environment:
+  - FLASK_ENV=development
+sync:
+  - ajedrez/www:/root/www
+forward:
+  - 80:80
