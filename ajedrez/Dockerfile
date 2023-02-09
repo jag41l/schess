@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 RUN  echo "8" > entrada && echo "29" >> entrada
 RUN apt-get update && apt-get install -y openjdk-8-jdk < entrada
 RUN apt-get install -y supervisor
@@ -8,7 +8,7 @@ COPY ./www /root/www
 WORKDIR /root
 EXPOSE 7777
 CMD /bin/supervisord -n
-CMD /bin/java -jar /root/serverajedrez.jar
+#CMD /bin/java -jar /root/serverajedrez.jar
 
 
 
