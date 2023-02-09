@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 RUN  echo "8" > entrada && echo "29" >> entrada
 RUN apt-get update && apt-get install -y openjdk-8-jdk < entrada
 RUN apt-get install -y supervisor
